@@ -30,6 +30,26 @@ module.exports = appInfo => {
     mapping: { '.html': 'ejs' },
   };
 
+  exports.mysql = {
+    client: {
+      // host
+      host: 'localhost',
+      // 端口号
+      port: '3306',
+      // 用户名
+      user: 'root',
+      // 密码
+      password: '',
+      // 数据库名
+      database: 'test',
+    },
+    // 是否加载到app上，默认开启
+    app: true,
+    // 是否加载到agent上，默认关闭
+    agent: false,
+  };
+
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
