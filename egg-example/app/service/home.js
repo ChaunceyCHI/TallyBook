@@ -15,10 +15,38 @@ class HomeService extends Service {
       return null;
     }
   }
+  // 实现添加接口
   async addUser(name) {
     const { ctx, app} = this;
     try {
       const result = await app.mysql.insert('list',{name});// 给list表新增一条数据
+      return result;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  }
+  // 实现编辑接口
+  async editUser(id, name) {
+    const { ctx, app } = this;
+    try {
+      let result = await app.mysql.update('list', { name }, {
+        where: {
+          id,
+        },
+      });
+      return result;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  }
+
+  // 实现删除接口
+  async deleteUser(id) {
+    const { ctx, app } = this;
+    try {
+      let result = await app.mysql.delete('list', { id });
       return result;
     } catch (error) {
       console.log(error);
