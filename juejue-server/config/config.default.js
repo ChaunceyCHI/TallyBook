@@ -35,6 +35,9 @@ module.exports = appInfo => {
     // myAppName: 'egg',
   };
 
+  config.jwt = {
+    secret: 'Nick',
+  };
   config.security = {
     csrf: {
       enable: false,
