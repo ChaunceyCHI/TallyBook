@@ -11,5 +11,5 @@ module.exports = app => {
   router.get('/api/user/get_userinfo', _jwt, controller.user.getUserInfo); // 获取用户信息
   router.get('/api/user/test', _jwt, controller.user.test); // 放入第二个参数，作为中间件过滤项
   router.post('/api/user/edit_userinfo', _jwt, controller.user.editUserInfo); // 修改用户个性签名
-
+  router.post('/api/upload', _jwt, controller.upload.upload); // 上传图片
 };

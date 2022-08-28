@@ -50,6 +50,20 @@ module.exports = appInfo => {
     mapping: { '.html': 'ejs' }, // 左边写成.html后缀，会自动渲染.html文件
   };
 
+  config.multipart = {
+    mode: 'file',
+  };
+
+  config.userConfig = {
+    // myAppName: 'egg',
+    uploadDir: 'app/public/upload',
+  };
+  config.cors = {
+    origin: '*',
+    credentials: true,
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
+  };
+
 
   return {
     ...config,
