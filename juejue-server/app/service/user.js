@@ -3,7 +3,7 @@
 const Server = require('egg').Controller;
 
 class UserService extends Server {
-// 通过用户名获取用户信息
+  // 通过用户名获取用户信息
   async getUserByName(username) {
     const { app } = this;
     try {
@@ -20,6 +20,23 @@ class UserService extends Server {
     const { app } = this;
     try {
       const result = await app.mysql.insert('user', params);
+      return result;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  }
+
+  // 修改用户信息
+  async editUserInfo(params) {
+    const { ctx, app } = this;
+    try {
+      // 通过app.mysql.update 方法，指定user表
+      let result = await app.mysql.update('user', {
+        ...params, // 要修改的参数体，直接通过...扩展操作符展开
+      }, {
+        id: params.id, // 筛选出id等于params.id的用户
+      });
       return result;
     } catch (error) {
       console.log(error);
