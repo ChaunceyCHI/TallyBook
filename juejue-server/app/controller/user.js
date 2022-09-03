@@ -133,31 +133,31 @@ class UserController extends Controller {
   // 修改个性签名
   async editUserInfo() {
     const { ctx, app } = this;
-    // 通过post请求，在请求体中获取签名字段signature
-    const { signature = '' } = ctx.request.body;
+    // 通过 post 请求，在请求体中获取签名字段 signature
+    const { signature = '', avatar = '' } = ctx.request.body;
 
     try {
       let user_id;
       const token = ctx.request.header.authorization;
-      // 解密token中的用户名
       const decode = await app.jwt.verify(token, app.config.jwt.secret);
       if (!decode) return;
       user_id = decode.id;
-      // 通过username查找userInfo完整信息
+
       const userInfo = await ctx.service.user.getUserByName(decode.username);
-      // 通过service方法editUserInfo修改signature信息
       const result = await ctx.service.user.editUserInfo({
         ...userInfo,
         signature,
+        avatar,
       });
 
       ctx.body = {
         code: 200,
-        msg: '请求成功',
+        msg: '修改成功',
         data: {
           id: user_id,
           signature,
           username: userInfo.username,
+          avatar,
         },
       };
     } catch (error) {

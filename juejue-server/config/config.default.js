@@ -58,9 +58,10 @@ module.exports = appInfo => {
     // myAppName: 'egg',
     uploadDir: 'app/public/upload',
   };
+
   config.cors = {
-    origin: '*',
-    credentials: true,
+    origin: '*', // 允许所有跨域访问
+    credentials: true, // 允许 Cookie 跨域跨域
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
   };
 

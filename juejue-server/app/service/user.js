@@ -1,8 +1,8 @@
 'use strict';
 
-const Server = require('egg').Controller;
+const Service = require('egg').Controller;
 
-class UserService extends Server {
+class UserService extends Service {
   // 通过用户名获取用户信息
   async getUserByName(username) {
     const { app } = this;
