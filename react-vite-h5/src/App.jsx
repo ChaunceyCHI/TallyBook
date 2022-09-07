@@ -1,34 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React, { useState } from 'react'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom'
+
+import { ConfigProvider } from 'zarm'
+// import zhCN from 'zarm/lib/config-provider/locale/zh_CN'
+// import 'zarm/dist/zarm.css'
+
+import routes from '../src/router'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+  return <Router>
+    {/*下方代码在颜色后面删除了  locale={zhCN} */}
+    <ConfigProvider primaryColor={'#007fff'} >
+    <Routes>
+      {
+        routes.map(route => <Route exact key={route.path} path={route.path} element={
+        <route.component/>
+      } />)
+      }
+    </Routes>
+    </ConfigProvider>
+  </Router>
 }
 
 export default App
