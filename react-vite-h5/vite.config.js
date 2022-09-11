@@ -54,8 +54,9 @@ export default defineConfig({
   // resolve.alias 别名设置
   resolve: {
     alias: {
-      '@': path.resolve(_dirname, 'src'), // src路径
-      'utils': path.resolve(_dirname, 'src/utils') // src路径
+      // 注意这里是双下划线
+      '@': path.resolve(__dirname, 'src'), // src路径
+      'utils': path.resolve(__dirname, 'src/utils') // src路径
     }
   },
    
