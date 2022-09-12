@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment} from 'react'
+import React, { useEffect, useState} from 'react'
 import {
   BrowserRouter as Router,
   Routes,
@@ -20,7 +20,7 @@ function App() {
   const [showNav, setShowNav] = useState(false); // 是否展示Nav
 
   useEffect(() => {
-    setShowNav(needNav, includes(pathname))
+    setShowNav(needNav.includes(pathname))
   }, [pathname]) // []内的参数若是变化，便会执行上述回调函数
 
   return (<>
