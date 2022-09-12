@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import PropTypes from 'prop-types';
-import { TabBar } from "zarm";
-import CustomIcon from '@/components/CustomIcon';
+import { TabBar, Icon } from "zarm";
 import { useLocation, useNavigate } from 'react-router-dom';
 import s from './style.module.less';
 
+const CustomIcon = Icon.createFromIconfont('//at.alicdn.com/t/c/font_3642808_o2jdsyjoaz.js')
 
 const NavBar = ({ showNav }) => {
     const NavigateTo = useNavigate()
@@ -20,17 +20,17 @@ const NavBar = ({ showNav }) => {
             <TabBar.Item
                 itemKey='/'
                 title='账单'
-                icon = {<CustomIcon type="zhangdan" />}
+                icon = {<CustomIcon type="icon-zhangdan" />}
             />
             <TabBar.Item
                 itemKey='/data'
                 title='统计'
-                icon = {<CustomIcon type="tongji" />}
+                icon = {<CustomIcon type="icon-tongji" />}
             />
             <TabBar.Item
                 itemKey='/user'
                 title='我的'
-                icon = {<CustomIcon type="wode" />}
+                 icon = {<CustomIcon type="icon-wode" />}
             />
         </TabBar>
     );
