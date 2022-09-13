@@ -1,10 +1,9 @@
 import React, {useState} from "react";
 import PropTypes from 'prop-types';
-import { TabBar, Icon } from "zarm";
+import { TabBar } from "zarm";
 import { useLocation, useNavigate } from 'react-router-dom';
 import s from './style.module.less';
-
-const CustomIcon = Icon.createFromIconfont('//at.alicdn.com/t/c/font_3642808_o2jdsyjoaz.js')
+import CustomIcon from '@/components/CustomIcon';
 
 const NavBar = ({ showNav }) => {
     const NavigateTo = useNavigate()
