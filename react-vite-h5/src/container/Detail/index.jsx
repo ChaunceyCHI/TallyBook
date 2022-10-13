@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 const Detail = () => {
-    return <div>Detail</div>
+  return <div>详情</div>
 }
 
 export default Detail

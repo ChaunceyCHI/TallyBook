@@ -1,63 +1,51 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { createStyleImportPlugin } from 'vite-plugin-style-import'
+import reactRefresh from '@vitejs/plugin-react-refresh'
+import styleImport from 'vite-plugin-style-import'
 import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    react(),
-    // 此处插件有更新，所以代码与教程有些不同
-    createStyleImportPlugin(
+    reactRefresh(),
+    styleImport(
       {
         libs: [
           {
             libraryName: 'zarm',
-            exModules: true,
+            esModule: true,
             resolveStyle: (name) => {
-              return `zarm/es/${name}/style/css`
+              return `zarm/es/${name}/style/css`;
             }
           }
         ]
       }
-    ),
-
+    )
   ],
-  
   css: {
-    // 防止自定义样式重名
     modules: {
       localsConvention: 'dashesOnly'
     },
-    // 采用Less作为CSS预处理器
     preprocessorOptions: {
       less: {
         // 支持内联 JavaScript
-        javascriptEnable: true,
+        javascriptEnabled: true,
       }
     }
   },
-
-  server: {
-    // 配置代理
-    proxy: {
-      '/api': {
-        // 当遇到 /api 路径时，将其转换成target的值
-        target: 'http://127.0.0.1:7001/api',
-        changeOrigin: true,
-        rewrite: path => path.replace(/^\api/,'') //将 /api 重写为空。
-
-      }
-    }
-  },
-
-  // resolve.alias 别名设置
   resolve: {
     alias: {
-      // 注意这里是双下划线
-      '@': path.resolve(__dirname, 'src'), // src路径
-      'utils': path.resolve(__dirname, 'src/utils') // src路径
+      '@': path.resolve(__dirname, 'src'), // src 路径
+      'utils': path.resolve(__dirname, 'src/utils') // src 路径
     }
   },
-   
+  server: {
+    proxy: {
+      '/api': {
+        // 当遇到 /api 路径时，将其转换成 target 的值
+        target: 'http://api.chennick.wang',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/api/, '') // 将 /api 重写为空
+      }
+    }
+  }
 })
