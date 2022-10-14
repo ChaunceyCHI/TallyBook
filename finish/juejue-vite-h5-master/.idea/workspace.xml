@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="23955e33-ffa5-4302-afee-f7b5d7b02b5b" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/juejue-vite-h5-master.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../react-vite-h5/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../react-vite-h5/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../react-vite-h5/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../react-vite-h5/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../react-vite-h5/src/container/Login/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../react-vite-h5/src/container/Login/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../react-vite-h5/src/utils/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../react-vite-h5/src/utils/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../react-vite-h5/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../react-vite-h5/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2G3nsfoCtlgKTayvyLdtw5RKaPQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/ROG/Desktop/TallyBook/finish/juejue-vite-h5-master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="23955e33-ffa5-4302-afee-f7b5d7b02b5b" name="变更" comment="" />
+      <created>1665626343772</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665626343772</updated>
+      <workItem from="1665626345477" duration="520000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

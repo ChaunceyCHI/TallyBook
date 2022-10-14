@@ -17,7 +17,6 @@ const Login = () => {
 
   //  验证码变化，回调方法
   const handleChange = useCallback((captcha) => {
-    console.log('captcha', captcha)
     setCaptcha(captcha)
   }, []);
   
@@ -36,8 +35,8 @@ const Login = () => {
           username,
           password
         });
-        console.log('data', data)
         localStorage.setItem('token', data.token);
+        window.location.href = '/';
       } else {
         if (!verify) {
           Toast.show('请输入验证码')
@@ -54,8 +53,8 @@ const Login = () => {
         Toast.show('注册成功');
          setType('login');
       }
-    } catch (error) {
-      Toast.show('系统错误');
+    } catch (err) {
+      Toast.show(err.msg);
     }
   };
 
